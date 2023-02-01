@@ -1,5 +1,4 @@
 import React from 'react';
-import { Filters } from 'component/molecules/index';
 import { Count, ClearCompleted } from 'component/atoms/index'; 
 
 
@@ -12,7 +11,6 @@ function FilterFooter({ children }) {
 };
 
 FilterFooter.Count = Count;
-FilterFooter.Filters = Filters;
 FilterFooter.ClearCompleted = ClearCompleted;
 
 export default FilterFooter;

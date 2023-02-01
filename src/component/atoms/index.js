@@ -4,6 +4,7 @@ import List from './List';
 import Count from './Count';
 import LocationList from './LocationList';
 import ClearCompleted from './ClearCompleted';
+import EditInput from './EditInput';
 
 export {
    NewTodoInput,
@@ -12,4 +13,5 @@ export {
    Count,
    LocationList,
    ClearCompleted,
+   EditInput,
 };

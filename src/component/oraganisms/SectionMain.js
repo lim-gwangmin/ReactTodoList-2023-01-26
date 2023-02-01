@@ -1,6 +1,5 @@
 import React from 'react';
 import { ToggleAll } from 'component/atoms/index';
-import { TodoList } from 'component/molecules/index';
 
 function SectionMain({ children }) {
    return (
@@ -11,6 +10,5 @@ function SectionMain({ children }) {
 };
 
 SectionMain.ToggleAll = ToggleAll;
-SectionMain.TodoList = TodoList;
 
 export default SectionMain;

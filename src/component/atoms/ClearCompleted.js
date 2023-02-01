@@ -1,8 +1,13 @@
 import React from 'react';
 
-function ClearCompleted() {
+function ClearCompleted({ allTodoClear }) {
    return (
-      <button className="clear-completed">Clear completed</button>
+      <button 
+         className="clear-completed"
+         onClick={allTodoClear}
+      >
+         Clear completed
+      </button>
    );
 };
 

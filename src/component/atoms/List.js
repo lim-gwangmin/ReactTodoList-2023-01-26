@@ -1,15 +1,31 @@
 import React from 'react';
+import EditInput from './EditInput';
+import { useLocation } from 'react-router';
+import routeLocation from 'utils/routeLocation';
 
-function List() {
+function List({ 
+   todos,
+   deleteTodo, 
+   todoChecked, 
+   editOepn, 
+   editing, 
+   editClose,
+ }) {
+   const location = useLocation().state.route;
+   const { routeFilterTodos } = routeLocation(todos, location);
+
    return (
-      <li className='completed'>
-         <div className="view">
-            <input className="toggle" type="checkbox" checked='checked'/>
-            <label>테스트 텍스트 1</label>
-            <button className="destroy"/>
-         </div>
-         <input className="edit" value="Create a TodoMVC template" />
-      </li>
+      routeFilterTodos && routeFilterTodos.map(todo => (
+         <EditInput 
+            key={todo.id}
+            todo={todo}
+            deleteTodo={deleteTodo}
+            todoChecked={todoChecked}
+            editOepn={editOepn}
+            editing={editing}
+            editClose={editClose}
+         />
+      ))
    );
 };
 

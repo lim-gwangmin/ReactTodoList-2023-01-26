@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Count({ count }) {
+function Count({ todos }) {
+   const activeTodoLength = todos.filter(todo => todo.done === false).length;
+   
    return (
-      <span class='todo-count'>
-         <strong>{count}</strong> item left
+      <span className='todo-count'>
+         <strong>{activeTodoLength}</strong> item left
       </span>
    );
 };

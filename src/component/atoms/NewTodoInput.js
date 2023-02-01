@@ -1,10 +1,28 @@
 import React from 'react';
 
-function NewTodoInput() {
+const ENTER = 'Enter';
+
+function NewTodoInput({ createTodo }) {
+   const [ text, setText ] = React.useState('');
+
+   const handleChange = e => {
+      setText(e.target.value);
+   };
+
+   const handleKeyPress = e => {
+      if(e.key !== ENTER || text === '') return;
+      createTodo(text);
+      setText('');
+   };
+
    return (
-      <React.Fragment>
-         <input className="new-todo" placeholder="What needs to be done?"/>
-      </React.Fragment>
+      <input 
+         className="new-todo" 
+         placeholder="What needs to be done?"
+         value={text}
+         onChange={handleChange}
+         onKeyPress={handleKeyPress}
+      />
    );
 };
 

@@ -1,9 +1,7 @@
 import Header from "./Header";
-import TodoList from "./TodoList";
-import Filters from "./Filters";
+import UnorderedList from "./UnorderedList";
 
 export {
    Header,
-   TodoList,
-   Filters,
+   UnorderedList,
 };
